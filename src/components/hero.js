@@ -2,10 +2,18 @@
 import Contents from "@/constants/data";
 import Image from "next/image";
 import FormModal from "@/components/modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "scroll";
+    return () => {};
+  }, [isActive]);
+
   const handleClick = () => {
     setIsActive(true);
   };

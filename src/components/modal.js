@@ -1,14 +1,16 @@
 import ContactForm from "./contactForm";
 import Contents from "@/constants/data";
+import { useEffect } from "react";
 
 export default function formModal({ closeModal }) {
   const handleClick = () => {
     closeModal(false);
   };
+  
   return (
     <>
       {
-        <div className="modal-container h-screen w-screen fixed top-0 z-50">
+        <div className="modal-container h-screen w-screen fixed top-0 z-[200] ">
           <div className="background h-full w-full bg-slate-500 opacity-95 blur-lg backdrop-blur-3xl border-8 border-black absolute"></div>
           <div className="form w-full h-screen top-0 relative z-[100]">
             <div

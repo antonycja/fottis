@@ -4,18 +4,29 @@ import Link from "next/link";
 import Contents from "@/constants/data";
 
 import FormModal from "@/components/modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "scroll";
+    return () => {};
+  }, [isActive]);
 
   const handleClick = () => {
     setIsActive(true);
   };
   return (
-    <nav className=" bg-slate-200 fixed top-0 w-screen z-50">
+    <nav className=" bg-slate-200 fixed top-0 w-screen z-[100]">
       {isActive && <FormModal closeModal={setIsActive} />}
-      <header className="mx-20 m-3 flex justify-between justify-items-center items-center ">
+      <header
+        className={`mx-20 m-3 flex justify-between justify-items-center items-center ${
+          isActive && ""
+        }`}
+      >
         <div className="logo">
           <Image
             src={Contents.nav.textLogo}

@@ -118,7 +118,7 @@ export default function ContactForm() {
           />
         </div>
         <div className="area flex flex-col">
-          <label htmlFor="area">Area of property</label>
+          <label htmlFor="area">Location of the apartment</label>
           <input
             type="text"
             id="area"
@@ -129,7 +129,7 @@ export default function ContactForm() {
           />
         </div>
         <div className="rent flex flex-col">
-          <label htmlFor="rent">Rent fees for the property (R)</label>
+          <label htmlFor="rent">Monthly rent of the apartment (R)</label>
           <div className="">
             <input
               type="number"

@@ -2,13 +2,13 @@ import { Images } from "./Images";
 const Contents = {
   nav: {
     textLogo: Images.textLogo,
-    btnText: "sign up",
+    btnText: "apply",
     navLinks: ["home", "about", "how it works", "contact us"],
   },
   hero: {
     title: "Stress-Free Rent Deposit Solutions",
     text: "At Fottis, we empower individuals to access quality housing by eliminating the financial challenges of steep apartment deposits.",
-    mainBtn: "Apply",
+    mainBtn: "Apply Now",
     secBtn: "",
     image: Images.heroImage,
   },
@@ -161,10 +161,12 @@ const Contents = {
   images: {
     bottomLandscape: Images.bottomLandscape,
     whiteCurve: Images.whiteCurve,
-    close: <Images.close
-    size={48}
-    fill="white"
-  />
+    close: (
+      <Images.close
+        size={48}
+        fill="white"
+      />
+    ),
   },
 };
 
